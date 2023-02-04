@@ -1,5 +1,6 @@
 from random import randint
 
+# This functions prints the card on the basis of input card number
 def print_card_name(card_rank):
     if card_rank == 1:
         card_name = "Ace"
@@ -18,6 +19,7 @@ def print_card_name(card_rank):
     elif card_rank > 1 and card_rank <= 13:
         print('Drew a ' + card_name)
 
+# This draws a card between 1 and 13 inclusive
 def draw_card():
     card = randint(1, 13)
     print_card_name(card)
@@ -27,11 +29,13 @@ def draw_card():
         card = 11
     return (card)
 
+
 def print_header(message):
     print('-----------')
     print(message)
     print('-----------')
 
+# This function helps to draw two card at the beginning
 def draw_starting_hand(name):
     name = name + ' TURN'
     print_header(name)
@@ -48,6 +52,7 @@ def draw_starting_hand(name):
         n = n + 1
     return (total)
 
+# This function prints the status of player
 def print_end_turn_status(hand_value):
     print('Final hand: ' + str(hand_value) + '.')
     if hand_value == 21:
@@ -55,6 +60,7 @@ def print_end_turn_status(hand_value):
     elif hand_value > 21:
         print('BUST.')
 
+# This function prints who is the winner
 def print_end_game_status(user_hand, dealer_hand):
     print_header('GAME RESULT')
     if user_hand > 21:
