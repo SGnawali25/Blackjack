@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { drawCard } from './cardUtils';
 import Hand from './Hand';
 import Button from './Button';
 import './App.css';
